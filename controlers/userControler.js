@@ -19,7 +19,7 @@ module.exports = {
         var id = req.params.terserah
         var sql = `select * from users where id = ${id};`
         db.query(sql,(err,result)=>{
-            res.send(result[0])
+            res.send(result)
         })
     },
     addUser : (req,res) => {

@@ -7,13 +7,14 @@ app.use(cors())
 app.use(bodyParser.json());
 
 const port = 2000 
-const { todoRouter } = require('./router')
+const { todoRouter , userRouter } = require('./router')
 
 app.get('/' , (req,res) => {
     res.send('<h1>Hello World</h1>')
 })
 
 app.use('/todo' , todoRouter)
+app.use('/user' , userRouter)
 
 
 // app.get('/nama/:terserah' , (req,res) => {
